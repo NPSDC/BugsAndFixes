@@ -1,0 +1,21 @@
+1) Download mosek from here:
+https://www.mosek.com/downloads/
+(I downloaded this to my ~/bin)
+
+cd ~/bin
+tar -xvf mosektoolslinux64x86.tar.bz2
+
+2) Add this to your ~/.bashrc
+export PATH=$PATH:/home/username/bin/mosek/8/tools/platform/linux64x86/bin
+
+3) Get academic license:
+https://www.mosek.com/products/academic-licenses/
+Check email, put licsense file in ~/mosek
+
+4) Install:
+
+export PKG_MOSEKHOME=/home/username/bin/mosek/8/tools/platform/linux64x86
+export PKG_MOSEKLIB=mosek64
+
+Then in R:
+install.packages("Rmosek", type="source", INSTALL_opts="--no-multiarch", repos="http://download.mosek.com/R/8")
