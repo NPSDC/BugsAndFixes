@@ -1,1 +1,2 @@
 options(download.file.method = "wget")
+Sys.setenv('https_proxy' = 'http://proxy.iiit.ac.in:8080') ##note http not https
